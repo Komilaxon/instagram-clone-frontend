@@ -2,7 +2,7 @@ import { IconButton } from '@material-tailwind/react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Link } from 'react-router-dom';
-import abdulaziz from '../../public/assets/abdulaziz.jpg'
+import abdulaziz from '/assets/abdulaziz.jpg'
 import React from 'react';
 const responsive = {
     superLargeDesktop: {

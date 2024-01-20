@@ -1,79 +1,47 @@
-import { IconButton } from "@material-tailwind/react"
-import quloq from '../../public/assets/quloq.jpg'
-import React, { LegacyRef, Ref, useRef } from "react"
-import { More_icon } from "../helpers/icons"
-import post_video from '../../public/assets/46864641_726823699375476_2083549675304038437_n.mp4'
-import post_video2 from '../../public/assets/45195682_1046693183205494_2726514298683749099_n.mp4'
-interface PostCardProps {
-    videoRef: LegacyRef<HTMLVideoElement>,
-    onPlay: (videoRef: any) => void,
-    url: string
-}
-const PostCard: React.FC<PostCardProps> = ({ videoRef, onPlay, url }) => {
-    return <div className="bg-white space-y-2">
-        {/* header */}
-        <div className="p-1 flex items-center justify-between">
-            <div className="flex items-center gap-x-2">
-                <div className='w-[42px] h-[42px] relative story_border_style rounded-full'>
-                    <div className='rounded-full absolute z-10 bg-white w-[37px] h-[37px] p-[2px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-                        <img src={quloq} alt="quloq" className='rounded-full' />
-                    </div>
-                </div>
-                <div>
-                    <div className="flex items-center gap-x-1">
-                        <span className="font-semibold text-[14px]">quloq.news</span>
-                        <span className="text-[#737373] text-[14px]">•</span>
-                        <time className="text-[#737373] text-[14px]">4 hour ago</time>
-                    </div>
-                    <span className="text-xs">Оригинальное аудио</span>
-                </div>
-            </div>
-            <IconButton className="bg-transparent dark:text-white text-black !shadow-none">
-                <More_icon />
-            </IconButton>
-        </div>
-        {/* body */}
-        <div className="bg-black h-[585px] rounded-md cursor-pointer" onClick={() => onPlay(videoRef)}>
-            <video ref={videoRef} className="w-full h-full rounded-md object-contain">
-                <source src={url} />
-            </video>
-        </div>
-        {/* footer */}
-        <hr />
-
-    </div>
-}
+import { useState } from "react"
+import post_video from '/assets/46864641_726823699375476_2083549675304038437_n.mp4'
+import post_video2 from '/assets/45195682_1046693183205494_2726514298683749099_n.mp4'
+import img1 from '/assets/419031539_1311600062869506_2843158237902233968_n.jpg'
+import VideoPlayer from "./heroPosts/VideoPlayer"
+import ImageCard from "./heroPosts/ImageCard"
+import PostHeader from "./heroPosts/PostHeader"
+import PostFooter from "./heroPosts/PostFooter"
 const HeroPosts = () => {
+    const [isMuted, setIsMuted] = useState(true)
     let demo_posts = [
         {
             url: post_video,
-            videoRef: useRef<HTMLVideoElement>(null)
+            post_type: "video"
         },
         {
             url: post_video2,
-            videoRef: useRef<HTMLVideoElement>(null)
+            post_type: "video"
+
         },
         {
             url: post_video,
-            videoRef: useRef<HTMLVideoElement>(null)
+            post_type: "video"
         },
         {
-            url: post_video2,
-            videoRef: useRef<HTMLVideoElement>(null)
+            url: 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            post_type: "image"
+        },
+        {
+            url: img1,
+            post_type: "image"
         }
     ]
-    const handleVideoPlay = (videoRef: any) => {
-        if (videoRef.current) {
-            videoRef.current.paused ? videoRef.current.play() : videoRef.current.pause()
-        }
-    }
     return (
         <article className="p-4 pb-0 full">
-            <div className="max-w-[470px]  mx-auto space-y-4">
+            <div className="max-w-[470px] mx-auto">
                 {
-                    demo_posts.map(post => <PostCard {...post} onPlay={handleVideoPlay} videoRef={post.videoRef} />
-                    )
-                }
+                    demo_posts.map((post, index) => <div className="bg-white space-y-2 mt-3" key={index}>
+                        <PostHeader />
+                        {post.post_type === "video" ? <VideoPlayer  {...post} isMuted={isMuted} setIsMuted={setIsMuted} /> :
+                            <ImageCard {...post} />
+                        }
+                        <PostFooter />
+                    </div>)}
             </div>
         </article >
     )
