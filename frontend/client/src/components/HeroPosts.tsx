@@ -1,3 +1,4 @@
+
 import { useState } from "react"
 import post_video from '/assets/46864641_726823699375476_2083549675304038437_n.mp4'
 import post_video2 from '/assets/45195682_1046693183205494_2726514298683749099_n.mp4'
@@ -47,4 +48,5 @@ const HeroPosts = () => {
     )
 }
 
-export default HeroPosts
+
+export default HeroPosts;

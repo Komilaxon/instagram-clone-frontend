@@ -1,18 +1,19 @@
-import HeroPosts from '../components/HeroPosts'
-import StoryCarousel from '../components/StoryCarousel'
+import HeroPosts from "../components/HeroPosts";
+import RightSider from "../components/RightSider";
+import StoryCarousel from "../components/StoryCarousel";
 
 const HeroHome = () => {
-    return (
-        <section className='w-full flex h-full pt-4'>
-            <div className='max-w-[630px] mx-auto w-full'>
-                <StoryCarousel />
-                <HeroPosts />
-            </div>
-            <div className='max-w-[319px] w-full bg-black'>
+  return (
+    <section className="w-full flex h-full pt-4">
+      <div className="max-w-[630px] mx-auto w-full">
+        <StoryCarousel />
+        <HeroPosts />
+      </div>
+      <div className="max-w-[319px] w-full mr-14">
+        <RightSider />
+      </div>
+    </section>
+  );
+};
 
-            </div>
-        </section>
-    )
-}
-
-export default HeroHome
+export default HeroHome;

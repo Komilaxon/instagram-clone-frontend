@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import { Burger_icon, Instagram_sider_icon } from "../helpers/icons"
 import { Menu, MenuHandler, MenuItem, MenuList } from "@material-tailwind/react"
 import { dropdown_items, menu_categories } from "../helpers/sider.data"
+
 const Sider = () => {
     return (
         <aside className='w-[244px] border-r px-3 pt-2 pb-5 h-screen flex flex-col justify-between'>
