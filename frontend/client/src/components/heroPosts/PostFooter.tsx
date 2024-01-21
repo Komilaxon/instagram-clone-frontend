@@ -2,12 +2,14 @@ import { useState } from 'react'
 import { Comment_icon, Like_icon, Liked_icon, Save_icon, Saved_icon, Share_icon } from '../../helpers/icons'
 
 const PostFooter = () => {
-  const [isSaved, setIsSaved] = useState(false)
-  const [isLiked, setIsLiked] = useState(false)
-  const [showAllComment, setShowAllComment] = useState(false)
+  const [isSaved, setIsSaved] = useState(false);
+  const [isLiked, setIsLiked] = useState(false);
+  const [showAllComment, setShowAllComment] = useState(false);
+  const [isInputTyping, setIsInputTyping] = useState(false);
   const toogleSave = () => setIsSaved(!isSaved)
   const toogleLike = () => setIsLiked(!isLiked)
   const toogleComment = () => setShowAllComment(!showAllComment)
+  const toogleInput = (e: React.ChangeEvent<HTMLInputElement>) => setIsInputTyping(!!e.target.value)
   return (
     <div className='space-y-0.5 flex flex-col justify-between h-full'>
       {/* header */}
@@ -39,10 +41,13 @@ const PostFooter = () => {
         </div>
       </div>
       {/* footer */}
-      <div className='pt-4'>
-        <form>
-          <input type="text" placeholder='Add a comment...' className='w-full outline-none text-[14px]' />
-          <button>Post</button>
+      <div className='py-4'>
+        <form className='flex items-center justify-between'>
+          <input name='comment' onChange={(e) => toogleInput(e)} type="text" placeholder='Add a comment...' className='w-full outline-none text-[14px]' />
+          {
+            isInputTyping &&
+            <button className='text-[14px] text-global_blue hover:text-[#1F4F7D] font-semibold'><span>Post</span></button>
+          }
         </form>
         <div className='bg-[#DBDBDB] w-full h-[1.2px] mt-3'></div>
       </div>

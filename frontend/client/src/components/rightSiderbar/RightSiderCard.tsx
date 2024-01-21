@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Img from "../../public/assets/abdulaziz.jpg";
+import Img from "/assets/abdulaziz.jpg";
 
 interface RightSider {
   img: string;
@@ -11,7 +11,6 @@ interface RightSider {
 }
 
 export const RightSiderCard: React.FC<RightSider> = ({
-  // img,
   title,
   text,
   subScribe,

@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import { RightSiderCard } from "../helpers/right.sider";
-import { rightSiderData } from "../data/right.sider.data";
-import { user } from "../data/right.sider.data";
-import { navbarList } from "../helpers/right.sider.navbar";
+import { navbarList, rightSiderData } from "../../helpers/right.sider.data";
+import { user } from "../../helpers/right.sider.data";
+import { RightSiderCard } from "./RightSiderCard";
 
 const RightSider = () => {
   return (
@@ -26,7 +25,7 @@ const RightSider = () => {
             className={
               i === navbarList.length - 1
                 ? "after:hidden"
-                : "after:content-['.'] after:mx-0.5 after:text-[#D2D2D2]"
+                : "after:content-['•'] after:text-[6px] after:mx-0.5 after:text-[#D2D2D2]"
             }
           >
             <Link

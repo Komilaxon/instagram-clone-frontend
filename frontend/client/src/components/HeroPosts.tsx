@@ -36,7 +36,7 @@ const HeroPosts = () => {
         <article className="p-4 pb-0 full">
             <div className="max-w-[470px] mx-auto">
                 {
-                    demo_posts.map((post, index) => <div className="bg-white space-y-2 mt-3" key={index}>
+                    demo_posts.map((post, index) => <div className="bg-white space-y-2 " key={index}>
                         <PostHeader />
                         {post.post_type === "video" ? <VideoPlayer  {...post} isMuted={isMuted} setIsMuted={setIsMuted} /> :
                             <ImageCard {...post} />

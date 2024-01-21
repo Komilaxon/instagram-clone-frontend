@@ -27,7 +27,10 @@ function App() {
       children: [
         {
           path: "/",
-          element:<HeroHome/>
+          element: <HeroHome />
+        }, {
+          path: "/search",
+          element: <></>
         }
       ]
     },

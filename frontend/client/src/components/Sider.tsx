@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { Burger_icon, Instagram_sider_icon } from "../helpers/icons"
 import { Menu, MenuHandler, MenuItem, MenuList } from "@material-tailwind/react"
 import { dropdown_items, menu_categories } from "../helpers/sider.data"
 
 const Sider = () => {
+    const location = useLocation();
     return (
         <aside className='w-[244px] border-r px-3 pt-2 pb-5 h-screen flex flex-col justify-between'>
             <div>
@@ -13,10 +14,12 @@ const Sider = () => {
                     </div>
                 </Link>
                 <div>{
-                    menu_categories.map(category => <button key={category.label} className="text-base w-full flex rounded-lg mt-1 items-center p-3 gap-x-3 hover:bg-[#F2F2F2]">
-                        {category.icon}
-                        {category.label}
-                    </button>)
+                    menu_categories.map(category => <Link key={category.label} to={category.path}>
+                        <button className={`${category.path === location.pathname ? 'font-semibold' : 'font-normal'} text-base w-full flex rounded-lg mt-1 items-center p-3 gap-x-3 hover:bg-[#F2F2F2]`}>
+                            {location.pathname === category.path ? category.iconSelected : category.icon}
+                            {category.label}
+                        </button>
+                    </Link>)
                 }</div>
             </div>
             <Menu placement="top-end">

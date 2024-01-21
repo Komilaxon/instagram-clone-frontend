@@ -1,6 +1,6 @@
 import HeroPosts from "../components/HeroPosts";
-import RightSider from "../components/RightSider";
-import StoryCarousel from "../components/StoryCarousel";
+import RightSider from "../components/rightSiderbar/RightSider";
+import StoryCarousel from "../components/story/StoryCarousel";
 
 const HeroHome = () => {
   return (
