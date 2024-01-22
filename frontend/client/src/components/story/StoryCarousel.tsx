@@ -48,7 +48,7 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ next, previous, carouselState
 };
 const StoryCard: React.FC<{ image: string, username: string }> = ({ image, username }) => <React.Fragment>
     <div className='w-[66px] h-[66px] relative story_border_style rounded-full'>
-        <div className='rounded-full absolute z-10 bg-white w-[61px] h-[61px] p-[2px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+        <div className='rounded-full absolute z-10 bg-white w-[62px] h-[62px] p-[2px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
             <img src={image} alt="" className='rounded-full' />
         </div>
     </div>
@@ -61,7 +61,7 @@ const StoryCarousel = () => {
         key: 1
     }
     return (
-        <div className='max-h-28 relative'>
+        <div className='max-h-28 relative mb-3'>
             <Carousel responsive={responsive} customButtonGroup={<ButtonGroup {...arr} />} arrows={false}>
                 {
                     Array.from({ length: 12 }).map((_, index) => <Link to={'#'} key={index}>

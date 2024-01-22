@@ -5,7 +5,7 @@ export const menu_categories = [
   { path: "/", iconSelected: <Home_seleted_icon />, icon: <Home_icon />, label: "Home" },
   { path: "/search", icon: <Search_icon />, label: "Search" },
   { path: "/explore", icon: <Explore_icon />, label: "Explore" },
-  { path: "/direct", icon: <Reels_icon />, label: "Reels" },
+  { path: "/reels", icon: <Reels_icon />, label: "Reels" },
   { path: "/direct/inbox/", icon: <Messages_icon />, label: "Messages" },
   { path: "/notifications", icon: <Like_icon />, label: "Notifications" },
   { path: "/create_post", icon: <Create_post_icon />, label: "Create" },

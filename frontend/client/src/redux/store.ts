@@ -3,10 +3,12 @@ import { setupListeners } from "@reduxjs/toolkit/query";
 import { auth } from "./api/auth/auth";
 import userReducer from "./reducers/user.reducer";
 import registerReducer from "./reducers/register.reducer";
+import siderReducer from "./reducers/sider.reducer";
 export const store = configureStore({
   reducer: {
     user: userReducer,
     register: registerReducer,
+    sider: siderReducer,
     [auth.reducerPath]: auth.reducer,
   },
   middleware: (getDefaultMiddleware) =>

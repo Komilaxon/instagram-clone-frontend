@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Comment_icon, Like_icon, Liked_icon, Save_icon, Saved_icon, Share_icon } from '../../helpers/icons'
 
-const PostFooter = () => {
+const PostFooter = ({ desc, like_count, author }: any) => {
   const [isSaved, setIsSaved] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
   const [showAllComment, setShowAllComment] = useState(false);
@@ -31,12 +31,10 @@ const PostFooter = () => {
       </div>
       {/* body */}
       <div>
-        <span className='text-[14px] font-semibold'>1 221  отметок "Нравится"</span>
+        <span className='text-[14px] font-semibold'>{like_count} likes</span>
         <div className='space-x-1'>
-          <span className={`font-semibold text-[14px] select-none ${showAllComment ? '' : 'text-two-line'}`}>quloq.news {" "}
-            <span className='text-[14px] font-normal select-all' onClick={toogleComment}>В каком районе Ташкента самая дешевая аренда квартиры? Отправь своему областному корешу
-              Согласно данным Центра экономических исследований и реформ, средняя стоимость аренды жилья в Ташкенте составляет $9,2 за квадратный метр
-            </span>
+          <span className={`font-semibold text-[14px] select-none ${showAllComment ? '' : 'text-two-line'}`}>{author.name} {" "}
+            <span className='text-[14px] font-normal select-all' onClick={toogleComment}>{desc}</span>
           </span>
         </div>
       </div>

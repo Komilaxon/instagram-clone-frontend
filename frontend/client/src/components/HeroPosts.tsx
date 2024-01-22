@@ -1,8 +1,7 @@
 
 import { useState } from "react"
-import post_video from '/assets/46864641_726823699375476_2083549675304038437_n.mp4'
-import post_video2 from '/assets/45195682_1046693183205494_2726514298683749099_n.mp4'
-import img1 from '/assets/419031539_1311600062869506_2843158237902233968_n.jpg'
+import shift from '/assets/10000000_398952369191366_2140464514156870462_n.mp4'
+import shift_image from '/assets/shift_img.jpg'
 import VideoPlayer from "./heroPosts/VideoPlayer"
 import ImageCard from "./heroPosts/ImageCard"
 import PostHeader from "./heroPosts/PostHeader"
@@ -11,37 +10,137 @@ const HeroPosts = () => {
     const [isMuted, setIsMuted] = useState(true)
     let demo_posts = [
         {
-            url: post_video,
-            post_type: "video"
+            url: shift,
+            author: {
+                name: "shiftacademyuz",
+                image: shift_image
+            },
+            audio: "Original audio",
+            desc: `⚡️Qo’lingizdagi telefondan vaqtni o’tkazish uchun emas, daromad topish uchun foydalaning!
+            Zamonaviy kasblardan biri bo’lgan Mobilografiyani 2 oy ichida o’rganing va boshlanishiga oyiga $200’dan 500’gacha daromad qiling!
+            
+            2 oy mobilografiya kursida o’qib nimalarni o’rganasiz?
+            
+            To’g’ri videoga olish, ya’ni rakurslarni to’g’ri tanlash, chiroyli kadrlarni terish. Umumiy qilib aytganda sifatli video olishni o’rganasiz!
+            
+            Studiyada chiroqlar bilan ishlash va undan tashqari barcha texnikalar bilan ishlash, mikrafon, shtativlarda ishlashni o’rganasiz!
+            
+            10 ta dasturda videolarni professional montaj qilishni, musiqa, perexotlar va boshqa resurslarni foydalanishni o’rganasiz!
+            
+            Darslar amaliyotga asoslangan, dars jarayonlarida shaharning ko’zga ko’rinarli lokatsiyalarida amaliyotlar bo’ladi!
+            
+            2 oylik kurs tugagandan so’ng, 1 oylik amaliyot mavjud! Amaliyot o’zimizni marketing agentsvamizda bo’ladi
+            
+            3 oylik umumiy kurs tugatilgandan so’ng, o’zimizda ishda qolishingiz mumkin!
+            
+            Bitta guruhda 5 kishi o’qiydi, shoshiling 4 ta joy qoldi!
+            
+            Hoziroq pastdagi tugmachani bosib ro’yxatdan o’ting!`,
+            post_type: "video",
+            like_count: 26
         },
         {
-            url: post_video2,
-            post_type: "video"
-
+            url: shift,
+            author: {
+                name: "shiftacademyuz",
+                image: shift_image
+            },
+            audio: "Original audio",
+            desc: `⚡️Qo’lingizdagi telefondan vaqtni o’tkazish uchun emas, daromad topish uchun foydalaning!
+            Zamonaviy kasblardan biri bo’lgan Mobilografiyani 2 oy ichida o’rganing va boshlanishiga oyiga $200’dan 500’gacha daromad qiling!
+            
+            2 oy mobilografiya kursida o’qib nimalarni o’rganasiz?
+            
+            To’g’ri videoga olish, ya’ni rakurslarni to’g’ri tanlash, chiroyli kadrlarni terish. Umumiy qilib aytganda sifatli video olishni o’rganasiz!
+            
+            Studiyada chiroqlar bilan ishlash va undan tashqari barcha texnikalar bilan ishlash, mikrafon, shtativlarda ishlashni o’rganasiz!
+            
+            10 ta dasturda videolarni professional montaj qilishni, musiqa, perexotlar va boshqa resurslarni foydalanishni o’rganasiz!
+            
+            Darslar amaliyotga asoslangan, dars jarayonlarida shaharning ko’zga ko’rinarli lokatsiyalarida amaliyotlar bo’ladi!
+            
+            2 oylik kurs tugagandan so’ng, 1 oylik amaliyot mavjud! Amaliyot o’zimizni marketing agentsvamizda bo’ladi
+            
+            3 oylik umumiy kurs tugatilgandan so’ng, o’zimizda ishda qolishingiz mumkin!
+            
+            Bitta guruhda 5 kishi o’qiydi, shoshiling 4 ta joy qoldi!
+            
+            Hoziroq pastdagi tugmachani bosib ro’yxatdan o’ting!`,
+            post_type: "video",
+            like_count: 26
         },
         {
-            url: post_video,
-            post_type: "video"
+            url: shift,
+            author: {
+                name: "shiftacademyuz",
+                image: shift_image
+            },
+            audio: "Original audio",
+            desc: `⚡️Qo’lingizdagi telefondan vaqtni o’tkazish uchun emas, daromad topish uchun foydalaning!
+            Zamonaviy kasblardan biri bo’lgan Mobilografiyani 2 oy ichida o’rganing va boshlanishiga oyiga $200’dan 500’gacha daromad qiling!
+            
+            2 oy mobilografiya kursida o’qib nimalarni o’rganasiz?
+            
+            To’g’ri videoga olish, ya’ni rakurslarni to’g’ri tanlash, chiroyli kadrlarni terish. Umumiy qilib aytganda sifatli video olishni o’rganasiz!
+            
+            Studiyada chiroqlar bilan ishlash va undan tashqari barcha texnikalar bilan ishlash, mikrafon, shtativlarda ishlashni o’rganasiz!
+            
+            10 ta dasturda videolarni professional montaj qilishni, musiqa, perexotlar va boshqa resurslarni foydalanishni o’rganasiz!
+            
+            Darslar amaliyotga asoslangan, dars jarayonlarida shaharning ko’zga ko’rinarli lokatsiyalarida amaliyotlar bo’ladi!
+            
+            2 oylik kurs tugagandan so’ng, 1 oylik amaliyot mavjud! Amaliyot o’zimizni marketing agentsvamizda bo’ladi
+            
+            3 oylik umumiy kurs tugatilgandan so’ng, o’zimizda ishda qolishingiz mumkin!
+            
+            Bitta guruhda 5 kishi o’qiydi, shoshiling 4 ta joy qoldi!
+            
+            Hoziroq pastdagi tugmachani bosib ro’yxatdan o’ting!`,
+            post_type: "video",
+            like_count: 26
         },
         {
-            url: 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-            post_type: "image"
+            url: shift,
+            author: {
+                name: "shiftacademyuz",
+                image: shift_image
+            },
+            audio: "Original audio",
+            desc: `⚡️Qo’lingizdagi telefondan vaqtni o’tkazish uchun emas, daromad topish uchun foydalaning!
+            Zamonaviy kasblardan biri bo’lgan Mobilografiyani 2 oy ichida o’rganing va boshlanishiga oyiga $200’dan 500’gacha daromad qiling!
+            
+            2 oy mobilografiya kursida o’qib nimalarni o’rganasiz?
+            
+            To’g’ri videoga olish, ya’ni rakurslarni to’g’ri tanlash, chiroyli kadrlarni terish. Umumiy qilib aytganda sifatli video olishni o’rganasiz!
+            
+            Studiyada chiroqlar bilan ishlash va undan tashqari barcha texnikalar bilan ishlash, mikrafon, shtativlarda ishlashni o’rganasiz!
+            
+            10 ta dasturda videolarni professional montaj qilishni, musiqa, perexotlar va boshqa resurslarni foydalanishni o’rganasiz!
+            
+            Darslar amaliyotga asoslangan, dars jarayonlarida shaharning ko’zga ko’rinarli lokatsiyalarida amaliyotlar bo’ladi!
+            
+            2 oylik kurs tugagandan so’ng, 1 oylik amaliyot mavjud! Amaliyot o’zimizni marketing agentsvamizda bo’ladi
+            
+            3 oylik umumiy kurs tugatilgandan so’ng, o’zimizda ishda qolishingiz mumkin!
+            
+            Bitta guruhda 5 kishi o’qiydi, shoshiling 4 ta joy qoldi!
+            
+            Hoziroq pastdagi tugmachani bosib ro’yxatdan o’ting!`,
+            post_type: "video",
+            like_count: 26
         },
-        {
-            url: img1,
-            post_type: "image"
-        }
+        
     ]
     return (
-        <article className="p-4 pb-0 full">
+        <article className="w-full">
             <div className="max-w-[470px] mx-auto">
                 {
                     demo_posts.map((post, index) => <div className="bg-white space-y-2 " key={index}>
-                        <PostHeader />
+                        <PostHeader {...post} />
                         {post.post_type === "video" ? <VideoPlayer  {...post} isMuted={isMuted} setIsMuted={setIsMuted} /> :
                             <ImageCard {...post} />
                         }
-                        <PostFooter />
+                        <PostFooter {...post} />
                     </div>)}
             </div>
         </article >

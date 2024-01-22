@@ -19,6 +19,10 @@
     background-position: -294px -273px;
 }
 
+.bg-video-pause-style {
+    background-position: 0 0;
+}
+
 .text-one-line {
     width: 66px;
     overflow: hidden;
