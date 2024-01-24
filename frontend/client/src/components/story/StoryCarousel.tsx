@@ -61,7 +61,7 @@ const StoryCarousel = () => {
         key: 1
     }
     return (
-        <div className='max-h-28 relative mb-3'>
+        <div className='max-h-28 relative mb-3 px-[1%]'>
             <Carousel responsive={responsive} customButtonGroup={<ButtonGroup {...arr} />} arrows={false}>
                 {
                     Array.from({ length: 12 }).map((_, index) => <Link to={'#'} key={index}>

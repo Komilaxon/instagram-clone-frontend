@@ -1,6 +1,6 @@
 
 import { Avatar } from "@material-tailwind/react"
-import { Create_post_icon, Explore_icon, Home_icon, Home_seleted_icon, Messages_icon, Reels_icon, Like_icon, Search_icon, Settings_icon, Saved_icon } from "../helpers/icons"
+import { Create_post_icon, Explore_icon, Home_icon, Home_seleted_icon, Messages_icon, Reels_icon, Like_icon, Search_icon, Settings_icon, Saved_icon, Moon_icon, Save_icon } from "../helpers/icons"
 export const menu_categories = [
   { path: "/", iconSelected: <Home_seleted_icon />, icon: <Home_icon />, label: "Home" },
   { path: "/search", icon: <Search_icon />, label: "Search" },
@@ -14,6 +14,7 @@ export const menu_categories = [
 
 export const dropdown_items = [
   { path: "/settings", icon: <Settings_icon />, label: "Settings" },
-  { path: "/saved", icon: <Saved_icon />, label: "Saved" },
+  { path: "/saved", icon: <Save_icon />, label: "Saved" },
+  { path: null, icon: <Moon_icon />, label: "Switch appearance" },
   { path: null, icon: null, label: "Log Out" },
 ];

@@ -4,14 +4,12 @@ import StoryCarousel from "../components/story/StoryCarousel";
 
 const HeroHome = () => {
   return (
-    <section className="w-full flex h-full pt-4">
-      <div className="max-w-[630px] mx-auto w-full">
+    <section className="w-full flex h-full pt-4 justify-end max-w-min border border-red-500">
+      <div className="lg:max-w-[630px] max-w-none w-full ">
         <StoryCarousel />
         <HeroPosts />
       </div>
-      <div className="max-w-[319px] w-full mr-14">
-        <RightSider />
-      </div>
+      <RightSider />
     </section>
   );
 };

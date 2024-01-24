@@ -5,7 +5,7 @@ import { RightSiderCard } from "./RightSiderCard";
 
 const RightSider = () => {
   return (
-    <aside className="w-[319px] px-3 h-screen justify-between space-y-5 pt-[16px]">
+    <aside className="px-3 h-screen justify-between space-y-5 pt-[16px]  max-w-[319px] lg:block hidden w-full mr-14">
       {user.map((user) => (
         <RightSiderCard {...user} key={user.title} />
       ))}

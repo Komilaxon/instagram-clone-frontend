@@ -1,6 +1,10 @@
 import { IconButton } from '@material-tailwind/react'
 import { More_icon } from '../../helpers/icons'
+import PostTools from './PostTools'
+import { useState } from 'react'
 const PostHeader = ({ author, audio }: any) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const toogleToolModal = () => setIsOpen(!isOpen);
     return (
         <div className="p-1 flex items-center justify-between ">
             <div className="flex items-center gap-x-2">
@@ -13,14 +17,15 @@ const PostHeader = ({ author, audio }: any) => {
                     <div className="flex items-center gap-x-1">
                         <span className="font-semibold text-[14px]">{author.name}</span>
                         <span className="text-[#737373] text-[14px]">•</span>
-                        <time className="text-[#737373] text-[14px]">4 hour ago</time>
+                        <time className="text-[#737373] text-[14px]">4h</time>
                     </div>
                     <span className="text-xs">{audio}</span>
                 </div>
             </div>
-            <IconButton className="bg-transparent dark:text-white text-black !shadow-none">
+            <IconButton onClick={toogleToolModal} className="bg-transparent dark:text-white text-black !shadow-none">
                 <More_icon />
             </IconButton>
+            <PostTools open={isOpen} toogleToolModal={toogleToolModal} />
         </div>
     )
 }

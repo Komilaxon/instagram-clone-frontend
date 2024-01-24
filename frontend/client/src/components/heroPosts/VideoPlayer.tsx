@@ -61,12 +61,15 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ url, isMuted, setIsMuted }) =
                     if (entry.isIntersecting) {
                         if (videoElement.paused) {
                             videoElement.play();
+                            setPaused(videoElement.paused)
                         }
                     } else {
                         if (!videoElement.paused) {
                             videoElement.pause();
+                            setPaused(videoElement.paused)
                         }
                     }
+                    
                 });
             };
 

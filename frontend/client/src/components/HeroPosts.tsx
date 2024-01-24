@@ -129,7 +129,7 @@ const HeroPosts = () => {
             post_type: "video",
             like_count: 26
         },
-        
+
     ]
     return (
         <article className="w-full">
