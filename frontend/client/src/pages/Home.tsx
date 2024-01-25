@@ -32,7 +32,7 @@ const Home = () => {
     <div className='flex items-start justify-between'>
       {/* Conditionally render MiniSider or Sider based on visibility */}
       <div className='min-w-[244px]'>
-        {search_visible || notification_visible ? <MiniSider /> : <Sider />}
+        <Sider />
         {search_visible && <SearchContainer />}
       </div>
       <main className={`h-screen w-[calc(100%-244px)] overflow-y-auto`}>

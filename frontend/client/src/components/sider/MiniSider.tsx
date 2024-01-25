@@ -25,8 +25,8 @@ const MiniSider = () => {
         <aside className='w-[73px] border-r px-3 pt-2 pb-5 h-screen flex flex-col justify-between'>
             <div>
                 <Link to={'/'}>
-                    <div className="pt-[20px] pb-4 pl-1">
-                        <IconButton className=" block bg-transparent text-black dark:text-white shadow-none hover:shadow-none">
+                    <div className="pt-[20px] pb-[8px] pl-1">
+                        <IconButton className="block bg-transparent text-black dark:text-white shadow-none hover:shadow-none">
                             <Instagram_sider_mini_icon />
                         </IconButton>
                     </div>
