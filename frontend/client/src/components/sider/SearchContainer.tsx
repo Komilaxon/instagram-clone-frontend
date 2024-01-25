@@ -7,7 +7,7 @@ const SearchContainer = () => {
         return null;
     }
     return (
-        <div>SearchContainer</div>
+        <div className="absolute top-0 left-[73px] w-[397px] bg-black h-screen z-[9999999999999999999]">SearchContainer</div>
     )
 }
 export default SearchContainer

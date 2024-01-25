@@ -21,16 +21,11 @@ const Sider = () => {
         }
     }
     return (
-        <aside className='lg:min-w-[244px] min-w-[73px] border-r px-3 pt-2 pb-5 h-screen flex flex-col justify-between'>
+        <aside className=' w-full border-r px-3 pt-2 pb-5 h-screen flex flex-col justify-between'>
             <div>
                 <Link to={'/'}>
                     <div className="pt-[25px] pb-4 px-3">
-                        <div className="lg:block hidden">
-                            <Instagram_sider_icon />
-                        </div>
-                        <IconButton className="lg:hidden block bg-transparent text-black dark:text-white">
-                            <Instagram_sider_mini_icon />
-                        </IconButton>
+                        <Instagram_sider_icon />
                     </div>
                 </Link>
                 <div>{

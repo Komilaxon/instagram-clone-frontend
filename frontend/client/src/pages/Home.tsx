@@ -5,6 +5,7 @@ import { RootState } from '../redux/store';
 import MiniSider from '../components/sider/MiniSider';
 import { useEffect } from 'react';
 import { setSiderState } from '../redux/reducers/sider.reducer';
+import SearchContainer from '../components/sider/SearchContainer';
 
 const Home = () => {
   // Get the search and notification visibility from the Redux store
@@ -30,8 +31,11 @@ const Home = () => {
   return (
     <div className='flex items-start justify-between'>
       {/* Conditionally render MiniSider or Sider based on visibility */}
-      {search_visible || notification_visible ? <MiniSider /> : <Sider />}
-      <main className={`flex justify-center h-screen ${search_visible || notification_visible ? 'w-[calc(100%-74px)]' : 'w-[calc(100%-244px)]'} overflow-y-auto`}>
+      <div className='min-w-[244px]'>
+        {search_visible || notification_visible ? <MiniSider /> : <Sider />}
+        {search_visible && <SearchContainer />}
+      </div>
+      <main className={`h-screen w-[calc(100%-244px)] overflow-y-auto`}>
         <Outlet />
       </main>
     </div>

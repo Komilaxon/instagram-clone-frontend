@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom"
-import { Burger_icon, Instagram_sider_icon, Instagram_sider_mini_icon } from "../../helpers/icons"
+import { Burger_icon, Instagram_sider_mini_icon } from "../../helpers/icons"
 import { Badge, IconButton, Menu, MenuHandler, MenuItem, MenuList } from "@material-tailwind/react"
 import { dropdown_items, menu_categories } from "../../helpers/sider.data"
 import { useDispatch } from "react-redux"
@@ -22,11 +22,11 @@ const MiniSider = () => {
         }
     }
     return (
-        <aside className='min-w-[73px] border-r px-3 pt-2 pb-5 h-screen flex flex-col justify-between'>
+        <aside className='w-[73px] border-r px-3 pt-2 pb-5 h-screen flex flex-col justify-between'>
             <div>
                 <Link to={'/'}>
-                    <div className="pt-[25px] pb-4 px-3">
-                        <IconButton className="lg:hidden block bg-transparent text-black dark:text-white">
+                    <div className="pt-[20px] pb-4 pl-1">
+                        <IconButton className=" block bg-transparent text-black dark:text-white shadow-none hover:shadow-none">
                             <Instagram_sider_mini_icon />
                         </IconButton>
                     </div>
