@@ -3,32 +3,38 @@ import { Burger_icon, Instagram_sider_icon, Instagram_sider_mini_icon } from "..
 import { Badge, Menu, MenuHandler, MenuItem, MenuList } from "@material-tailwind/react"
 import { dropdown_items, menu_categories } from "../../helpers/sider.data"
 import { useDispatch, useSelector } from "react-redux"
-import { setSiderState } from "../../redux/reducers/sider.reducer"
+import { clearSiderState, setSiderState } from "../../redux/reducers/sider.reducer"
 import { RootState } from "../../redux/store"
 
 const Sider = () => {
     const location = useLocation();
     const nativete = useNavigate()
     const dispatch = useDispatch()
-    const { search_visible } = useSelector((state: RootState) => state.sider)
+    const { search_visible, messages_visible } = useSelector((state: RootState) => state.sider)
     const handleChangeCategory = (path: string) => {
+        dispatch(clearSiderState())
         if (path === "/search") {
             dispatch(setSiderState({ search_visible: !search_visible }))
         } else if (path === "/notifications") {
 
         } else if (path === "/create_post") {
 
-        } else {
+        }
+        else if (path === "/direct/inbox") {
+            nativete(path)
+            dispatch(setSiderState({ messages_visible: true }));
+        }
+        else {
             nativete(path)
         }
     }
     return (
-        <aside className={`${search_visible ? 'w-[73px]' : 'w-full'} border-r border-global_silver px-3 pt-9 pb-5 h-screen flex flex-col justify-between`}>
+        <aside className={`${search_visible || messages_visible ? 'w-[73px]' : 'w-full'} border-r border-global_silver px-3 pt-9 pb-5 h-screen flex flex-col justify-between relative `}>
             <div>
                 <Link to={'/'}>
                     <div className="h-[48px] px-3">
                         {
-                            search_visible ? <Instagram_sider_mini_icon /> : <Instagram_sider_icon />
+                            (search_visible || messages_visible) ? <Instagram_sider_mini_icon /> : <Instagram_sider_icon />
                         }
                     </div>
                 </Link>
@@ -40,7 +46,7 @@ const Sider = () => {
                                     {location.pathname === category.path ? category.iconSelected : category.icon}
                                 </Badge>
                                 {
-                                    !search_visible &&
+                                    !search_visible && !messages_visible &&
                                     <span className="lg:block hidden">{category.label}</span>
                                 }
                             </button>
@@ -53,8 +59,7 @@ const Sider = () => {
                     <button className="text-base w-full flex rounded-lg mt-1 items-center p-3 gap-x-3 hover:bg-[#F2F2F2]">
                         <Burger_icon />
                         {
-                            !search_visible &&
-
+                            (!search_visible || !messages_visible) &&
                             <span className="lg:block hidden">Ещё</span>
                         }
                     </button>

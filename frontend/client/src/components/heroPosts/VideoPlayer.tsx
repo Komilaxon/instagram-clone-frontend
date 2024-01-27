@@ -69,7 +69,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ url, isMuted, setIsMuted }) =
                             setPaused(videoElement.paused)
                         }
                     }
-                    
+
                 });
             };
 
@@ -97,7 +97,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ url, isMuted, setIsMuted }) =
 
     return <div className="bg-black h-[585px] relative rounded-md cursor-pointer" >
         {
-            paused && <div className="  bg-[url(https://static.cdninstagram.com/rsrc.php/v3/ys/r/qv7ZSPGDNFr.png)] bg-video-pause-style bg-no-repeat absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[135px] h-[135px]"></div>
+            paused && <div className="bg-[url(https://static.cdninstagram.com/rsrc.php/v3/ys/r/qv7ZSPGDNFr.png)] bg-video-pause-style bg-no-repeat absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[135px] h-[135px]"></div>
         }
         <video onContextMenu={(e) => e.preventDefault()} onClick={handleVideoPause} muted={isMuted} ref={videoRef} className="w-full  z-10 h-full rounded-md object-contain">
             <source src={url} />

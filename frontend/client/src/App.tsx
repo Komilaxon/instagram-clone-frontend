@@ -7,6 +7,9 @@ import Register from "./pages/register/Register"
 import BirthdaySelect from "./pages/register/BirthdaySelect"
 import EmailOrPhoneVerification from "./pages/register/EmailOrPhoneVerification"
 import HeroHome from "./pages/HeroHome"
+import Explore from "./pages/Explore/Explore"
+import Direct from "./pages/Direct/Direct"
+import Reels from "./pages/Reels/Reels"
 
 function App() {
   const user = useSelector((state: RootState) => state.user);
@@ -29,8 +32,14 @@ function App() {
           path: "/",
           element: <HeroHome />
         }, {
-          path: "/search",
-          element: <></>
+          path: "/explore",
+          element: <Explore />
+        }, {
+          path: "/direct/inbox",
+          element: <Direct />
+        }, {
+          path: "/reels",
+          element: <Reels />
         }
       ]
     },
